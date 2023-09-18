@@ -32,9 +32,10 @@ class CfgFunctions
 			class contextAction_isNearPOIarea { file = "functions\client\contextAction\fn_isNearPOIarea.sqf"; };
 			class contextAction_POIprivateStore { file = "functions\client\contextAction\fn_POIprivateStore.sqf"; };
 			class contextAction_POIpublicStore { file = "functions\client\contextAction\fn_POIpublicStore.sqf"; };
-			class contextAction_POIwater { file = "functions\client\contextAction\fn_POIwater.sqf"; };
 			class contextAction_removePOIfnc { file = "functions\client\contextAction\fn_removePOIfnc.sqf"; };
 			class items_fishingRod { file = "functions\client\items\fn_fishingRod.sqf"; };
+			class contextAction_POIwater { file = "functions\client\contextAction\POItype\fn_POIwater.sqf"; };
+			class contextAction_POIwheat { file = "functions\client\contextAction\POItype\fn_POIwheat.sqf"; };
 
 		};
 
@@ -49,6 +50,7 @@ class CfgFunctions
 		{
 
 			class debug_logContent { file = "functions\core\debug\fn_logContent.sqf"; };
+			class debug_teleportOnMapClick { file = "functions\core\debug\fn_teleportOnMapClick.sqf"; };
 
 		};
 
