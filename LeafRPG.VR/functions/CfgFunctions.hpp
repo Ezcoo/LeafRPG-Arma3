@@ -16,6 +16,7 @@ class CfgFunctions
 			class cfgBuild { file = "functions\cfg\fn_cfgBuild.sqf"; };
 			class cfgEconomy { file = "functions\cfg\fn_cfgEconomy.sqf"; };
 			class cfgItems { file = "functions\cfg\fn_cfgItems.sqf"; };
+			class initCfg { file = "functions\cfg\fn_initCfg.sqf"; };
 
 		};
 
