@@ -1,5 +1,5 @@
 // Logging level. See more info: fn_logContent.sqf
-LeafRPG_logLevel = 0;
+LeafRPG_logLevel = 1;
 
 ["VERBOSE", "Entering initServer.sqf."] call LEAF_fnc_debug_logContent;
 
