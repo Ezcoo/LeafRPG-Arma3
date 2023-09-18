@@ -3,4 +3,6 @@ LeafRPG_logLevel = 0;
 
 ["VERBOSE", "Entering initPlayerLocal.sqf."] call LEAF_fnc_debug_logContent;
 
+call LEAF_fnc_defineVariables;
+
 ["VERBOSE", "Leaving initPlayerLocal.sqf."] call LEAF_fnc_debug_logContent;
