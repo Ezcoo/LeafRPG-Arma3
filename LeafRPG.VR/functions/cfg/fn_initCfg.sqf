@@ -3,7 +3,9 @@
 _arrConfigs = [
     LEAF_fnc_cfgBuild,
     LEAF_fnc_cfgEconomy,
-    LEAF_fnc_cfgItems
+    LEAF_fnc_cfgItems,
+    LEAF_fnc_cfgPublicStores,
+    LEAF_fnc_cfgPrivateStores
 ];
 
 {
