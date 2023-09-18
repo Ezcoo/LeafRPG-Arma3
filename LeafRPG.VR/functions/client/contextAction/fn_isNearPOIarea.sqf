@@ -1,28 +1,36 @@
 ["VERBOSE", "Entering fn_isNearPOIarea.sqf."] call LEAF_fnc_debug_logContent;
 
-// TODO: Add water check (if there's water under or in immediate proximity of player)
-
 params ["_player"];
 
-private ["_inFrontOfPlayerPos"];
+private ["_inFrontOfPlayerPos","_areaType","_areaPos"];
+
+// Water check
 
 _inFrontOfPlayerPos = _player modelToWorld [0, 10, 0];
 
-// Water check
 if (surfaceIsWater _inFrontOfPlayerPos) exitWith {
-    [_player, "WATER"] call LEAF_fnc_contextAction_addPOIfnc;
-    LEAF_bIsContextActionAdded = true;
+    if (!LEAF_bIsContextActionAdded) then {
+        [_player, "WATER"] call LEAF_fnc_contextAction_addPOIfnc;
+    };
 };
 
-// TODO: Add production area check
+// Production area check
 
 {
-    // _x # 1 = position of the area
-    if ((getPosATL _player) inArea _x # 1) exitWith {
-        // _x # 0 = area type (e.g. "WHEAT")
-        [_player, _x # 0] call LEAF_fnc_contextAction_addPOIfnc;
-        LEAF_bIsContextActionAdded = true;
+    _areaPos = _x # 1;
+    if ((getPosATL _player) inArea _areaPos) exitWith {
+        if (!LEAF_bIsContextActionAdded) then {
+            _areaType = _x # 0;
+            [_player, _areaType] call LEAF_fnc_contextAction_addPOIfnc;
+        };
     };
 } forEach LEAF_cfg_arrProductionAreas;
+
+
+// If we didn't find any matches, player is not in or has just left a POI area and we can delete the action if it still exists
+
+if (LEAF_bIsContextActionAdded) then {
+    [_player] call LEAF_fnc_contextAction_removePOIfnc;
+};
 
 ["VERBOSE", "Leaving fn_isNearPOIarea.sqf."] call LEAF_fnc_debug_logContent;
