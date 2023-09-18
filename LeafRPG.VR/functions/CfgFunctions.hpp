@@ -29,6 +29,7 @@ class CfgFunctions
 		class common
 		{
 
+			class defineVariables { file = "functions\common\fn_defineVariables.sqf"; };
 			class test { file = "functions\common\fn_test.sqf"; };
 
 		};
