@@ -23,6 +23,14 @@ class CfgFunctions
 		class client
 		{
 
+			class clientLoop { file = "functions\client\fn_clientLoop.sqf"; };
+			class contextAction_addPOIfnc { file = "functions\client\contextAction\fn_addPOIfnc.sqf"; };
+			class contextAction_bIsNearPOI { file = "functions\client\contextAction\fn_bIsNearPOI.sqf"; };
+			class contextAction_determinePOItype { file = "functions\client\contextAction\fn_determinePOItype.sqf"; };
+			class contextAction_POIprivateStore { file = "functions\client\contextAction\fn_POIprivateStore.sqf"; };
+			class contextAction_POIpublicStore { file = "functions\client\contextAction\fn_POIpublicStore.sqf"; };
+			class contextAction_POIwater { file = "functions\client\contextAction\fn_POIwater.sqf"; };
+			class contextAction_removePOIfnc { file = "functions\client\contextAction\fn_removePOIfnc.sqf"; };
 			class items_fishingRod { file = "functions\client\items\fn_fishingRod.sqf"; };
 
 		};
