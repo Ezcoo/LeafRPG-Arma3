@@ -87,6 +87,9 @@ LEAF_bFishing = false;
 // Gang areas
 LEAF_strOldGang = "";
 
+// Context action
+LEAF_bIsContextActionAdded = false;
+
 // Weather & time
 LEAF_bWeatherAndTimeSynced = false;
 

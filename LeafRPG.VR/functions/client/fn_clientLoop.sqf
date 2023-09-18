@@ -4,10 +4,8 @@ while {true} do {
 
     sleep 1;
 
-    if (call LEAF_fnc_contextAction_bIsNearPOI) then {
-        call LEAF_fnc_contextAction_addPOIfnc;
-    } else {
-        call LEAF_fnc_contextAction_removePOIfnc;
+    if (!LEAF_bIsContextActionAdded) then {
+        [player] call LEAF_fnc_contextAction_isNearPOIarea;
     };
 };
 
