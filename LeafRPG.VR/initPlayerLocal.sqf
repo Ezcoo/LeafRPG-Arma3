@@ -6,6 +6,8 @@ LeafRPG_logLevel = 1;
 call LEAF_fnc_defineVariables;
 call LEAF_fnc_initCfg;
 
-call LEAF_fnc_clientLoop;
+[] spawn LEAF_fnc_clientLoop;
+
+call LEAF_fnc_debug_teleportOnMapClick;
 
 ["VERBOSE", "Leaving initPlayerLocal.sqf."] call LEAF_fnc_debug_logContent;
