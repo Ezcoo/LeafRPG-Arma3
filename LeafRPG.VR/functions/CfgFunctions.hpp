@@ -16,6 +16,9 @@ class CfgFunctions
 			class cfgBuild { file = "functions\cfg\fn_cfgBuild.sqf"; };
 			class cfgEconomy { file = "functions\cfg\fn_cfgEconomy.sqf"; };
 			class cfgItems { file = "functions\cfg\fn_cfgItems.sqf"; };
+			class cfgPrivateStores { file = "functions\cfg\fn_cfgPrivateStores.sqf"; };
+			class cfgProductionAreas { file = "functions\cfg\fn_cfgProductionAreas.sqf"; };
+			class cfgPublicStores { file = "functions\cfg\fn_cfgPublicStores.sqf"; };
 			class initCfg { file = "functions\cfg\fn_initCfg.sqf"; };
 
 		};
@@ -25,8 +28,8 @@ class CfgFunctions
 
 			class clientLoop { file = "functions\client\fn_clientLoop.sqf"; };
 			class contextAction_addPOIfnc { file = "functions\client\contextAction\fn_addPOIfnc.sqf"; };
-			class contextAction_bIsNearPOI { file = "functions\client\contextAction\fn_bIsNearPOI.sqf"; };
 			class contextAction_determinePOItype { file = "functions\client\contextAction\fn_determinePOItype.sqf"; };
+			class contextAction_isNearPOIarea { file = "functions\client\contextAction\fn_isNearPOIarea.sqf"; };
 			class contextAction_POIprivateStore { file = "functions\client\contextAction\fn_POIprivateStore.sqf"; };
 			class contextAction_POIpublicStore { file = "functions\client\contextAction\fn_POIpublicStore.sqf"; };
 			class contextAction_POIwater { file = "functions\client\contextAction\fn_POIwater.sqf"; };
@@ -39,7 +42,6 @@ class CfgFunctions
 		{
 
 			class defineVariables { file = "functions\common\fn_defineVariables.sqf"; };
-			class test { file = "functions\common\fn_test.sqf"; };
 
 		};
 
