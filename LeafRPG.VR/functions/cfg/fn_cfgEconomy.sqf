@@ -1,3 +1,6 @@
+
+["VERBOSE", "Entering fn_cfgEconomy.sqf."] call LEAF_fnc_debug_logContent;
+
 // Character start money
 LEAF_cfg_iCharacterStartMoney				= 2500;
 
@@ -37,3 +40,6 @@ LEAF_cfg_iRobCooldownTime					= 900;
 LEAF_cfg_iBankRobberyAmount					= 45000;
 LEAF_cfg_iBankRobberyAmountRandom			= 5000;
 LEAF_cfg_iBankRobberyCooldown				= 3600;
+
+
+["VERBOSE", "Leaving fn_cfgEconomy.sqf."] call LEAF_fnc_debug_logContent;
