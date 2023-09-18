@@ -19,10 +19,31 @@ class CfgFunctions
 
 		};
 
+		class client
+		{
+
+			class items_fishingRod { file = "functions\client\items\fn_fishingRod.sqf"; };
+
+		};
+
+		class common
+		{
+
+			class test { file = "functions\common\fn_test.sqf"; };
+
+		};
+
 		class core
 		{
 
 			class debug_logContent { file = "functions\core\debug\fn_logContent.sqf"; };
+
+		};
+
+		class server
+		{
+
+			class placeholder { file = "functions\server\fn_placeholder.sqf"; };
 
 		};
 
