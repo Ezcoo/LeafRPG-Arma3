@@ -89,6 +89,7 @@ LEAF_strOldGang = "";
 
 // Context action
 LEAF_bIsContextActionAdded = false;
+LEAF_aLastContextAction = "NOTHING";
 
 // Weather & time
 LEAF_bWeatherAndTimeSynced = false;
