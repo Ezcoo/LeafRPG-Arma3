@@ -5,34 +5,50 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=129;
+	mods[]=
+	{
+		"3denEnhanced"
+	};
 	class ItemIDProvider
+	{
+		nextID=6;
+	};
+	class MarkerIDProvider
 	{
 		nextID=2;
 	};
 	class Camera
 	{
-		pos[]={5297.8467,7.7935481,4332.1538};
-		dir[]={-0.54188174,-0.17364819,-0.82232028};
-		up[]={-0.095548376,0.98480767,-0.14499725};
-		aside[]={-0.83500582,0,0.55024105};
+		pos[]={5297.0635,25.283609,4318.2554};
+		dir[]={-0.27562445,-0.71144116,0.64643842};
+		up[]={-0.27903491,0.70274562,0.65443718};
+		aside[]={0.91987532,-1.4901161e-008,0.39221078};
 	};
 };
 binarizationWanted=0;
 sourceName="LeafRPG";
 addons[]=
 {
-	"A3_Characters_F_Orange"
+	"A3_Characters_F_Orange",
+	"A3_Ui_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=1;
+		items=2;
 		class Item0
 		{
 			className="A3_Characters_F_Orange";
 			name="Arma 3 Orange - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -68,7 +84,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1;
+		items=5;
 		class Item0
 		{
 			dataType="Group";
@@ -81,7 +97,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5295.2114,5.0014391,4328.6094};
+						position[]={5289.1563,5.0014391,4330.519};
+						angles[]={0,4.7115626,0};
 					};
 					side="Civilian";
 					flags=7;
@@ -97,6 +114,58 @@ class Mission
 			{
 			};
 			id=0;
+		};
+		class Item1
+		{
+			dataType="Trigger";
+			position[]={5275.1768,5,4330.3569};
+			class Attributes
+			{
+				name="LEAF_trg_wheatHarvest";
+				text="Wheat Harvest";
+				sizeA=5;
+				sizeB=5;
+				sizeC=5;
+				isRectangle=1;
+				triggerInterval=1;
+			};
+			id=2;
+			type="EmptyDetectorArea10x10";
+		};
+		class Item2
+		{
+			dataType="Marker";
+			position[]={5275.2021,5,4330.3872};
+			name="marker_0";
+			text="HARVEST WHEAT";
+			type="mil_dot";
+			id=3;
+		};
+		class Item3
+		{
+			dataType="Trigger";
+			position[]={5274.1226,5,4370.7549};
+			class Attributes
+			{
+				name="LEAF_trg_sugarCaneHarvest";
+				text="Sugar Cane Harvest";
+				sizeA=5;
+				sizeB=5;
+				sizeC=5;
+				isRectangle=1;
+				triggerInterval=1;
+			};
+			id=4;
+			type="EmptyDetectorArea10x10";
+		};
+		class Item4
+		{
+			dataType="Marker";
+			position[]={5274.1348,5,4370.8052};
+			name="marker_1";
+			text="Sugar Cane Harvest";
+			type="mil_dot";
+			id=5;
 		};
 	};
 };
