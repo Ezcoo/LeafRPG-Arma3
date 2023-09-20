@@ -14,9 +14,12 @@ while {true} do {
         // Player has moved (like teleported) instantly from a POI to another
         if ((_typeOfProductionArea != LEAF_aLastContextAction) && LEAF_bIsContextActionAdded) then {
             [player] call LEAF_fnc_contextAction_removePOIfnc;
-        } else {
-            // Player has entered a POI from normal map area
             [player, _typeOfProductionArea] call LEAF_fnc_contextAction_addPOIfnc;
+        } else {
+            // Player has just entered a new POI from normal map area
+            if (!LEAF_bIsContextActionAdded) then {
+                [player, _typeOfProductionArea] call LEAF_fnc_contextAction_addPOIfnc;
+            };
         };
         // Update current context action for future reference
         LEAF_aLastContextAction = _typeOfProductionArea;
